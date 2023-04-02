@@ -109,6 +109,8 @@ app.get("/api/users/:id/logs", async (req, res) => {
             return new Date(to).getTime() >= new Date(item.date).getTime();
         });
 
+    }else{
+        log = user.log
     }
     if (limit) log = user.log.slice(limit);
 
