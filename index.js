@@ -88,7 +88,7 @@ app.get("/api/users/:id/logs", async (req, res) => {
     const uid = req.params.id;
     const user = await User.findById(uid);
 
-    let log;
+    let log = [];
 
     if (from && to) {
         const fromDate = new Date(from).getTime();
